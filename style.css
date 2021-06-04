@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+:root {
+  --overlay-color: #03a9f4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.showcase {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  color: #fff;
+  z-index: 2;
+  transition: 0.5s;
+}
+
+.showcase.active {
+  right: 300px;
+}
+
+.showcase header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.5s;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.logo:hover {
+  font-size: 2em;
+}
+
+.go-to-ph {
+  text-decoration: none;
+  color: #fff;
+  padding: 1rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.go-to-ph:hover {
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.go-to-singapore {
+  text-decoration: none;
+  color: #fff;
+  padding: 1rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.go-to-singapore:hover {
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.go-to-japan {
+  text-decoration: none;
+  color: #fff;
+  padding: 1rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.go-to-japan:hover {
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.active {
+  background-color: #fff;
+  color: black;
+  border-radius: 10px;
+}
+
+.menu-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  border: 3px solid white;
+  z-index: 2000;
+}
+
+.menu-btn-burger {
+  width: 40px;
+  height: 4px;
+  background: #fff;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+  z-index: 2000;
+}
+
+.menu-btn-burger::before,
+.menu-btn-burger::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 4px;
+  background: #fff;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn-burger::before {
+  transform: translateY(-12px);
+}
+
+.menu-btn-burger::after {
+  transform: translateY(12px);
+}
+
+.menu-btn:hover {
+  width: 70px;
+  height: 70px;
+}
+
+/* Menu Icon Animation */
+.menu-btn.active .menu-btn-burger {
+  background: transparent;
+}
+
+.menu-btn.active .menu-btn-burger::before {
+  background: black;
+  transform: rotate(45deg);
+}
+
+.menu-btn.active .menu-btn-burger::after {
+  background: black;
+  transform: rotate(-45deg);
+}
+
+.showcase video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: overlay;
+}
+
+.text {
+  position: relative;
+  z-index: 10;
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.text h2 {
+  font-size: 5em;
+  font-weight: 800;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.text h3 {
+  font-size: 4em;
+  font-weight: 700;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.text p {
+  font-size: 1.1em;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+}
+
+.text a {
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-decoration: none;
+  color: #111;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+
+.text a:hover {
+  letter-spacing: 6px;
+}
+
+.social {
+  position: absolute;
+  bottom: 20px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social li {
+  list-style: none;
+}
+
+.social li a {
+  display: inline-block;
+  filter: invert(1);
+  margin-right: 20px;
+  transform: scale(0.8);
+  transition: 0.5s;
+}
+
+.social li a:hover {
+  transform: scale(0.8) translateY(-15px);
+}
+
+.social img {
+  height: 50px;
+  width: 50px;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu ul {
+  position: relative;
+  list-style: none;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  font-size: 24px;
+  color: #111;
+}
+
+.menu ul li a:hover {
+  color: var(--overlay-color);
+}
+
+@media(max-width: 798px) {
+  .showcase, .showcase header {
+    padding: 40px;
+  }
+
+  .text h2 {
+    font-size: 3em;
+  }
+
+  .text h3 {
+    font-size: 2em;
+  }
+
+  .go-to-ph,
+  .go-to-singapore,
+  .go-to-japan {
+    font-size: 0.8em;
+    padding: 0.5rem;
+  }
+}
